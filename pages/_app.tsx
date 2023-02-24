@@ -5,11 +5,11 @@ import Head from "next/head";
 import ThirdwebGuideFooter from "../components/GitHubLink";
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Mumbai;
+const activeChainId = ChainId.Goerli;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider desiredChainId={activeChainId}>
+    <ThirdwebProvider desiredChainId={activeChainId}> 
       <Head>
         <title>thirdweb Edition Drop Minting Customizable Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,8 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
-      <ThirdwebGuideFooter />
+      {/* <ThirdwebGuideFooter /> */}
     </ThirdwebProvider>
+    
   );
 }
 

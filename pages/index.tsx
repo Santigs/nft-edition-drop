@@ -17,7 +17,7 @@ import { parseIneligibility } from "../utils/parseIneligibility";
 
 // Put Your Edition Drop Contract address from the dashboard here
 const myEditionDropContractAddress =
-  "0xDC8017E1E20BFF80a49B0B92F719f00170013B4F";
+  "0xEc380a84035Bce934F0a148D1040d660F8dF2b6A";
 
 // Put your token ID here
 const tokenId = 0;
@@ -211,6 +211,8 @@ const Home: NextPage = () => {
     priceToMint,
     quantity,
   ]);
+  
+  let imageNew = "https://gateway.ipfscdn.io/ipfs/QmcukoLK7n9tLQJz7cvhni3rwE5AbWUgxev2xJPwdFALgt/0.png";
 
   return (
     <div className={styles.container}>
@@ -232,7 +234,7 @@ const Home: NextPage = () => {
               {/* Image Preview of NFTs */}
               <img
                 className={styles.image}
-                src={contractMetadata?.image}
+                src={imageNew}
                 alt={`${contractMetadata?.name} preview image`}
               />
 
@@ -318,12 +320,12 @@ const Home: NextPage = () => {
         )}
       </div>
       {/* Powered by thirdweb */}{" "}
-      <img
+      {/* <img
         src="/logo.png"
         alt="thirdweb Logo"
         width={135}
         className={styles.buttonGapTop}
-      />
+      /> */}
     </div>
   );
 };
