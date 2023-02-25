@@ -9,7 +9,19 @@ const activeChainId = ChainId.Goerli;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider desiredChainId={activeChainId}> 
+    <ThirdwebProvider 
+
+    sdkOptions={{
+      gasless: {
+        biconomy: {
+          apiKey: "<ru9eSvUtK.def6b7b9-170a-4688-8798-f79ba2016d45>",
+          apiId: "<758876f9-0f1b-49bc-8f59-200d9c1a1aa1>",
+        }
+      },
+    }}
+    
+    
+    activeChain={activeChainId}> 
       <Head>
         <title>thirdweb Edition Drop Minting Customizable Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
